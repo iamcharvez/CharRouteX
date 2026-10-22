@@ -1,0 +1,1 @@
+{"main":{"identifier":"main","description":"Minimal core capability for the local CharRouteX window; all custom operations remain allow-listed Rust commands.","local":true,"windows":["main"],"permissions":["core:default"]}}

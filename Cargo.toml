@@ -1,0 +1,19 @@
+[workspace]
+members = ["crates/network-core", "crates/network-protocol", "crates/windows-network", "service/windows-helper", "src-tauri"]
+resolver = "2"
+
+[workspace.package]
+version = "1.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+rust-version = "1.90"
+
+[workspace.dependencies]
+chrono = { version = "0.4.42", default-features = false, features = ["clock", "serde"] }
+network-core = { path = "crates/network-core" }
+network-protocol = { path = "crates/network-protocol" }
+serde = { version = "1.0.228", features = ["derive"] }
+thiserror = "2.0.17"
+tracing = "0.1.41"
+windows = { version = "0.62.2", features = ["Win32_Foundation", "Win32_NetworkManagement_IpHelper", "Win32_NetworkManagement_Ndis", "Win32_Networking_WinSock", "Win32_UI_Shell", "Win32_UI_WindowsAndMessaging"] }
+

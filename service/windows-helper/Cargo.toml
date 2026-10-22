@@ -1,0 +1,11 @@
+[package]
+name = "windows-helper"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+network-protocol.workspace = true
+serde_json = "1.0.145"
+

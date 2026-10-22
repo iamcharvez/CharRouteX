@@ -1,0 +1,18 @@
+[package]
+name = "windows-network"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+chrono.workspace = true
+network-core.workspace = true
+rustls = { version = "0.23.35", default-features = false, features = ["ring", "std", "tls12"] }
+socket2 = { version = "0.6.1", features = ["all"] }
+tracing.workspace = true
+webpki-roots = "1.0.4"
+
+[target.'cfg(windows)'.dependencies]
+windows.workspace = true
+
